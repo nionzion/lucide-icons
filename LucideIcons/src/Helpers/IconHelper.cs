@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
 using Svg;
 using System.Drawing;
+using LucideIcons.Enum;
 
 namespace LucideIcons.Helpers
 {
@@ -26,9 +28,12 @@ namespace LucideIcons.Helpers
             // Ressourcestream abrufen
             using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
             {
-                if (stream == null)
-                    throw new Exception($"Icon '{iconName}' wurde nicht gefunden. Überprüfen Sie den Ressourcennamen und die Ordnerstruktur.");
-
+                if(stream == null)
+                {
+                    Debug.WriteLine($"Resource could not be loaded: {iconName}");
+                    return GetIcon(IconName.MessageCircleQuestion.ToString(), iconStroke, strokeWidth, width, height);
+                }
+                
                 // SVG-Dokument laden und in ein Bitmap rendern
                 var svgDoc = SvgDocument.Open<SvgDocument>(stream);
                 svgDoc.Stroke = new SvgColourServer(iconStroke);
