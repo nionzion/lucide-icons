@@ -14,7 +14,7 @@ namespace LucideIcons.Helpers
             string name = value.ToString();
         
             // Mit Regex: Vor jedem Großbuchstaben (außer dem ersten) wird ein Bindestrich eingefügt.
-            string kebabCase = Regex.Replace(name, "(?<!^)([A-Z])", "-$1").ToLowerInvariant();
+            string kebabCase = Regex.Replace(name, "(?<!^)([A-Z0-9])", "-$1").ToLowerInvariant();
         
             return kebabCase;
         }
