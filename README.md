@@ -3,6 +3,6 @@ This is a wrapper .NET Framework Library for using the popular [Lucide Iconset](
 
 # Usage
 ```xaml
-<lucideIcons:Icon LucideIcon="Annoyed" Height="32" Width="32" />
+<lucideIcons:Icon LucideIcon="Annoyed" Height="32" Width="32" Stroke="Orange" StrokeWidth="1.0"/>
 ```
 
