@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <readme>README.md</readme>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/nionzion</projectUrl>
+    <description>$description$</description>
+    <releaseNotes>Added stroke color and stroke width</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>Lucide Icons</tags>
+  </metadata>
+  <files>
+    <file src=".\README.md" target="\" />
+  </files>
+</package>
