@@ -28,8 +28,8 @@ namespace LucideIcons
         
         public Color Stroke
         {
-            get { return (Color)GetValue(IconProperty); }
-            set { SetValue(IconProperty, value); }
+            get { return (Color)GetValue(StrokeProperty); }
+            set { SetValue(StrokeProperty, value); }
         }
 
         public static readonly DependencyProperty StrokeProperty =
